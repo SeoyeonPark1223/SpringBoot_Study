@@ -7,6 +7,14 @@ plugins {
 group = 'hello'
 version = '0.0.1-SNAPSHOT'
 
+// lombok settings
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+// lombok settings
+
 java {
 	toolchain {
 		languageVersion = JavaLanguageVersion.of(17)
@@ -19,6 +27,16 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'jakarta.inject:jakarta.inject-api:2.0.1' // JSR-330 Provider
+	implementation 'org.springframework.boot:spring-boot-starter-web' // 웹 라이브러리
+
+	// lombok settings
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	// lombok settings
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
