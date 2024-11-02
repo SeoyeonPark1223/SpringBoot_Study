@@ -5,3 +5,6 @@
 
 2. `core`
     - 강의: [스프링 핵심 원리 - 기본편](https://inf.run/kCYMv)
+
+3. `jpashop`
+    - 강의: [실전! 스프링 부트와 JPA 활용1 - 웹 애플리케이션 개발](https://inf.run/hhEvV)
