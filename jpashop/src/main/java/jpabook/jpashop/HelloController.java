@@ -9,7 +9,7 @@ public class HelloController {
 
     @GetMapping("hello")
     public String hello(Model model) { // model에 정보를 담아서 view로 보낼 수 있음
-        model.addAttribute("data", "hello!!!");
-        return "hello"; // 자동으로 hello.html이 됨
+        model.addAttribute("data", "Hello!!!!");
+        return "hello";
     }
 }
