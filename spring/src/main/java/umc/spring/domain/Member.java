@@ -73,4 +73,8 @@ public class Member extends BaseEntity {
     @OneToMany(mappedBy = "member", cascade = CascadeType.ALL)
     private List<Review> reviewList = new ArrayList<>();
 
+    // 새로운 review를 리스트에 추가
+    public void addReviewList(Review review) {
+        reviewList.add(review);
+    }
 }
