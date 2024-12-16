@@ -77,4 +77,9 @@ public class Member extends BaseEntity {
     public void addReviewList(Review review) {
         reviewList.add(review);
     }
+
+    // 새로운 mission을 리스트에 추가
+    public void addMemberMissionList(MemberMission mission) {
+        memberMissionList.add(mission);
+    }
 }
