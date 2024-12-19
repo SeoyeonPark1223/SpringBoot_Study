@@ -22,7 +22,7 @@ public class Patient extends BaseEntity {
     @Column(nullable = false, length = 20)
     private String pName;
 
-    private int pAge;
+    private int age;
 
     @Enumerated(EnumType.STRING)
     @Column(columnDefinition = "VARCHAR(10) DEFAULT 'MALE'")

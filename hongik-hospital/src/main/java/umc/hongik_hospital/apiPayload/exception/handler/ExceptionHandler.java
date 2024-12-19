@@ -1,7 +1,10 @@
 package umc.hongik_hospital.apiPayload.exception.handler;
 
-public class ExceptionHandler extends RuntimeException {
-  public ExceptionHandler(String message) {
-    super(message);
-  }
+import umc.hongik_hospital.apiPayload.code.BaseErrorCode;
+import umc.hongik_hospital.apiPayload.exception.GeneralException;
+
+public class ExceptionHandler extends GeneralException {
+    public ExceptionHandler(BaseErrorCode code) {
+        super(code);
+    }
 }

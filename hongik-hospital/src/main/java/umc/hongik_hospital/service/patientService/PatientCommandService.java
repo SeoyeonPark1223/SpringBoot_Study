@@ -1,4 +1,8 @@
-package umc.hongik_hospital.service.memberService;
+package umc.hongik_hospital.service.patientService;
 
-public class MemberCommandService {
+import umc.hongik_hospital.domain.Patient;
+import umc.hongik_hospital.web.dto.PatientRequestDTO;
+
+public interface PatientCommandService {
+    Patient joinPatient(PatientRequestDTO.JoinDTO request);
 }

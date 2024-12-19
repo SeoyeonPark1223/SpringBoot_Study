@@ -7,6 +7,8 @@ import umc.hongik_hospital.domain.Specialist;
 import umc.hongik_hospital.domain.common.BaseEntity;
 import umc.hongik_hospital.domain.enums.RevStatus;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Builder
@@ -25,6 +27,8 @@ public class Reservation extends BaseEntity {
     private String medicalRecord;
 
     private Long price;
+
+    private LocalDateTime reservationTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "specialist_id")
